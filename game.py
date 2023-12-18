@@ -82,11 +82,32 @@ back_right_wall_2 = Entity(model='cube', position=(45, 5, -85),
                            scale=(1, 10, 50), collider='box', 
                            texture='pic/wall.jpg', texture_scale=(15, 10))
 
-EditorCamera()  # 맵 생성 중 카메라 구도 조정(마우스 우클릭)
+# EditorCamera()  # 맵 생성 중 카메라 구도 조정(마우스 우클릭)
 
-# character = FirstPersonController() # 1인칭으로 맵 보기
-# character.cursor.visible = False    # 커서 보이기 방지
-# character.gravity = 0.5 # 중력에 따라 캐릭터 점프력 차이
-# character.speed = 10    # 이동 속도
+character = FirstPersonController() # 1인칭으로 맵 보기
+character.cursor.visible = False    # 커서 보이기 방지
+character.gravity = 0.5 # 중력에 따라 캐릭터 점프력 차이
+character.speed = 20    # 이동 속도
+
+# 특정 좌표에서 워프
+def update():
+    # 캐릭터의 위치 좌표 확인 및 
+    print(character.position)
+    if character.position.x < -25 and character.position.z > 50:
+        character.set_position(
+            (
+                -character.position.x,
+                character.position.y,
+                -character.position.z
+            )
+        )
+    elif character.position.x > 25 and character.position.z < -50:
+        character.set_position(
+            (
+                -character.position.x,
+                character.position.y,
+                -character.position.z
+            )
+        )
 
 app. run()
