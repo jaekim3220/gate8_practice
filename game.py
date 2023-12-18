@@ -41,11 +41,23 @@ front_ceiling = Entity(model='cube', position=(-25, 10, 55),
                        collider='box')
 front_left_wall = Entity(model='cube', position=(-30, 5, 50), 
                          scale=(50, 10, 1), collider='box', 
-                         texture='pic/wall.jpg', texture_scale=(16, 10))
+                         texture='pic/wall.jpg', texture_scale=(15, 10))
 front_right_wall = Entity(model='cube', position=(-20, 5, 60), 
                           scale=(50, 10, 1), collider='box', 
-                          texture='pic/wall.jpg', texture_scale=(16, 10))
+                          texture='pic/wall.jpg', texture_scale=(15, 10))
 
+front_floor_2 = Entity(model='cube', position=(-50, 0, 80), 
+                       scale=(10, 1, 60), color=color.light_gray, 
+                       collider='box')
+front_ceiling_2 = Entity(model='cube', position=(-50, 10, 80), 
+                         scale=(10, 1, 61), color=color.light_gray, 
+                         collider='box')
+front_left_wall_2 = Entity(model='cube', position=(-55, 5, 79.7), 
+                           scale=(1, 10, 61), collider='box', 
+                           texture='pic/wall.jpg', texture_scale=(15, 10))
+front_right_wall_2 = Entity(model='cube', position=(-45, 5, 85), 
+                            scale=(1, 10, 50), collider='box', 
+                            texture='pic/wall.jpg', texture_scale=(15, 10))
 
 EditorCamera()  # 맵 생성 중 카메라 구도 조정(마우스 우클릭)
 
