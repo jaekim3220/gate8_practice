@@ -59,6 +59,29 @@ front_right_wall_2 = Entity(model='cube', position=(-45, 5, 85),
                             scale=(1, 10, 50), collider='box', 
                             texture='pic/wall.jpg', texture_scale=(15, 10))
 
+# 뒷쪽
+back_floor = Entity(model='cube', position=(25, 0, -55), 
+                    scale=(60, 1, 10), color=color.light_gray, collider='box')
+back_ceiling = Entity(model='cube', position=(25, 10, -55), 
+                      scale=(60, 1, 10), color=color.light_gray, collider='box')
+back_left_wall = Entity(model='cube', position=(30, 5, -50), 
+                        scale=(50, 10, 1), collider='box', 
+                        texture='pic/wall.jpg', texture_scale=(15, 10))
+back_right_wall = Entity(model='cube', position=(20, 5, -60), 
+                         scale=(50, 10, 1), collider='box', 
+                         texture='pic/wall.jpg', texture_scale=(15, 10))
+
+back_floor_2 = Entity(model='cube', position=(50, 0, -80), 
+                      scale=(10, 1, 60), color=color.light_gray, collider='box')
+back_ceiling_2 = Entity(model='cube', position=(50, 10, -80), 
+                        scale=(10, 1, 60), color=color.light_gray, collider='box')
+back_left_wall_2 = Entity(model='cube', position=(55, 5, -75 - 4.7), 
+                          scale=(1, 10, 61), collider='box', 
+                          texture='pic/wall.jpg', texture_scale=(15, 10))
+back_right_wall_2 = Entity(model='cube', position=(45, 5, -85), 
+                           scale=(1, 10, 50), collider='box', 
+                           texture='pic/wall.jpg', texture_scale=(15, 10))
+
 EditorCamera()  # 맵 생성 중 카메라 구도 조정(마우스 우클릭)
 
 # character = FirstPersonController() # 1인칭으로 맵 보기
